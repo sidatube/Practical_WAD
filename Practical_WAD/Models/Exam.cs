@@ -14,13 +14,15 @@ namespace Practical_WAD.Models
 
         [DataType(DataType.Time)]
         [Required(ErrorMessage = "Vui lòng nhập giờ!")]
+        [DisplayFormat(DataFormatString = "{0:HH:MM}", ApplyFormatInEditMode = true)]
+
 
         public DateTime startTime { get; set; }
 
         [Required(ErrorMessage = "Vui lòng nhập ngày !")]
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime examDate { get; set; }
         public int dutation { get; set; }
         public int classroomId { get; set; }
